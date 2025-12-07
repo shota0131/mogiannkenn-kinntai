@@ -1,0 +1,197 @@
+/* ===============================
+   🌟 基本レイアウト
+   =============================== */
+.staff-list-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    border-left: 6px solid #000;
+    padding-left: 10px;
+}
+
+.staff-list-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 24px;
+}
+
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+    /* 小画面で崩れ防止（横スクロール対応） */
+}
+
+.staff-table th,
+.staff-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 10px;
+    white-space: nowrap;
+}
+
+.staff-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.staff-table tr:hover {
+    background-color: #f3f6ff;
+}
+
+.detail-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+.detail-btn:hover {
+    background-color: #333;
+}
+
+/* 横スクロール対応 */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+
+
+
+/* ===============================
+   📱 スマホ（〜479px）
+   =============================== */
+@media (max-width: 479px) {
+    .staff-list-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .page-title {
+        font-size: 1.3rem;
+        border-left: 4px solid #000;
+        padding-left: 8px;
+        margin-bottom: 20px;
+    }
+
+    .staff-list-card {
+        padding: 16px;
+    }
+
+    .staff-table th,
+    .staff-table td {
+        padding: 10px 6px;
+        font-size: 0.9rem;
+    }
+
+    .detail-btn {
+        padding: 5px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ===============================
+   💻 タブレット（480px〜1023px）
+   =============================== */
+@media (min-width: 480px) and (max-width: 1023px) {
+    .staff-list-container {
+        width: 94%;
+        max-width: 800px;
+        margin: 30px auto;
+    }
+
+    .page-title {
+        font-size: 1.4rem;
+    }
+
+    .staff-list-card {
+        padding: 20px;
+    }
+}
+
+
+/* ===============================
+   🖥 通常PC（1024px〜1399px）
+   =============================== */
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .staff-list-container {
+        max-width: 950px;
+        padding: 0 20px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ===============================
+   💡 要件：PC（1400〜1540px）
+   =============================== */
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .staff-list-container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 24px;
+    }
+
+    .staff-list-card {
+        padding: 24px 28px;
+    }
+
+    .staff-table th,
+    .staff-table td {
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
+}
+
+
+/* ===============================
+   🖥 超ワイドモニター（1541px〜）
+   =============================== */
+@media (min-width: 1541px) {
+    .staff-list-container {
+        max-width: 1040px;
+        padding: 0 28px;
+    }
+
+    .page-title {
+        font-size: 1.7rem;
+    }
+
+    .staff-list-card {
+        padding: 28px;
+    }
+}
+
+.staff-table tr:hover {
+    background-color: #f3f6ff;
+}
+
+.detail-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+.detail-btn:hover {
+    background-color: #333;
+}

@@ -1,0 +1,249 @@
+/* ==============================
+   背景
+============================== */
+body {
+    background-color: #fcfcfc !important;
+}
+
+/* ==============================
+   コンテナ
+============================== */
+.admin-request-container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+/* ==============================
+   タイトル
+============================== */
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+    border-left: 5px solid #000;
+    padding-left: 12px;
+    margin-bottom: 40px;
+}
+
+/* ==============================
+   タブ
+============================== */
+.tab-area {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+.tab {
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: #000;
+}
+
+.tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+/* ==============================
+   テーブルカード
+============================== */
+.table-card {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ==============================
+   テーブル
+============================== */
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.request-table th {
+    background-color: #fff;
+    padding: 12px;
+    border-bottom: 2px solid #ccc;
+    font-weight: normal;
+    text-align: center;
+}
+
+.request-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.request-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==============================
+   申請理由欄（…で省略）
+============================== */
+.reason {
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ==============================
+   詳細リンク
+============================== */
+.detail-btn {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ==============================
+   データなし
+============================== */
+.no-data {
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+/* ==============================
+   レスポンシブ対応
+============================== */
+
+/* スマホ（〜479px） */
+@media (max-width: 479px) {
+    .admin-request-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .page-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .tab-area {
+        gap: 15px;
+    }
+
+    .tab {
+        font-size: 14px;
+        padding-bottom: 3px;
+    }
+
+    .request-table th,
+    .request-table td {
+        font-size: 12px;
+        padding: 8px 5px;
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .request-table tr {
+        margin-bottom: 15px;
+        display: block;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .reason {
+        max-width: 100%;
+    }
+}
+
+/* タブレット（480px〜1023px） */
+@media (min-width: 480px) and (max-width: 1023px) {
+    .admin-request-container {
+        width: 94%;
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .page-title {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .request-table th,
+    .request-table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+/* 通常PC（1024px〜1399px） */
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .admin-request-container {
+        width: 90%;
+        max-width: 1000px;
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+
+    .request-table th,
+    .request-table td {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* PC（1400px〜1540px） */
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .admin-request-container {
+        width: 85%;
+        max-width: 1050px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .request-table th,
+    .request-table td {
+        font-size: 15px;
+        padding: 14px;
+    }
+}
+
+/* 超ワイド（1541px〜） */
+@media (min-width: 1541px) {
+    .admin-request-container {
+        width: 80%;
+        max-width: 1100px;
+    }
+
+    .page-title {
+        font-size: 26px;
+    }
+
+    .request-table th,
+    .request-table td {
+        font-size: 16px;
+        padding: 15px;
+    }
+}

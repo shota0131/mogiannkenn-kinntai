@@ -1,0 +1,173 @@
+/* ==============================
+   背景
+============================== */
+body {
+    background-color: #e6e6e6 !important;
+}
+
+/* ==============================
+   コンテナ
+============================== */
+.request-container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+/* ==============================
+   タイトル
+============================== */
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+    border-left: 5px solid #000;
+    padding-left: 12px;
+    margin-bottom: 40px;
+}
+
+/* ==============================
+   タブメニュー
+============================== */
+.tab-menu {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+.tab-item {
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.tab-item.active {
+    font-weight: bold;
+    color: #000;
+}
+
+.tab-item.active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+/* ==============================
+   テーブルカード
+============================== */
+.table-card {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ==============================
+   テーブル
+============================== */
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.request-table th {
+    background-color: #fff;
+    padding: 12px;
+    border-bottom: 2px solid #ccc;
+    font-weight: normal;
+}
+
+.request-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+
+.request-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==============================
+   詳細リンク
+============================== */
+.detail-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ==============================
+   データなし
+============================== */
+.no-data {
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* タブ下の区切り線（カードと同じ幅） */
+.tab-underline {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   💻 タブレット対応（768〜1023px）
+   =============================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .correction-container {
+        width: 85%;
+    }
+}
+
+/* ===============================
+   💻 PC対応（1024〜1399px）
+   =============================== */
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .correction-container {
+        max-width: 850px;
+    }
+}
+
+/* ===============================
+   💻 1400〜1540px対応（要件）
+   =============================== */
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .correction-container {
+        max-width: 900px;
+    }
+
+    .correction-card {
+        padding: 40px;
+    }
+
+    .correction-title {
+        font-size: 24px;
+    }
+
+    .btn-submit {
+        padding: 12px 50px;
+        font-size: 16px;
+    }
+}
+
+/* ===============================
+   💻 超ワイドモニター対応（1541px〜）
+   =============================== */
+@media (min-width: 1541px) {
+    .correction-container {
+        max-width: 950px;
+    }
+}

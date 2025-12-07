@@ -18,15 +18,24 @@ class RedirectIfAuthenticated
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next, ...$guards)
-    {
-        $guards = empty($guards) ? [null] : $guards;
+{
+    $guards = empty($guards) ? [null] : $guards;
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+    foreach ($guards as $guard) {
+        if (Auth::guard($guard)->check()) {
+            // ログイン済みの場合、すでにログインページにいるなら無視する
+            if ($request->is('login') || $request->is('admin/login')) {
+                return $next($request);
             }
-        }
 
-        return $next($request);
+            if ($guard === 'admin') {
+                return redirect('/admin/attendance/list');
+            }
+
+            return redirect('/attendance');
+        }
     }
+
+    return $next($request);
+}
 }

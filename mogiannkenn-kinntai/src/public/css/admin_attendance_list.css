@@ -1,0 +1,176 @@
+/* ===== 背景 ===== */
+.admin-main {
+    width: 100%;
+    background: #e8e8eb;
+    min-height: 100vh;
+    padding: 60px 0;
+}
+
+/* ===== タイトル（カード外） ===== */
+.date-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    width: 90%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.date-title::before {
+    content: "";
+    width: 5px;
+    height: 26px;
+    background: #000;
+    border-radius: 2px;
+}
+
+/* ===== 上のカード（ナビ） ===== */
+.nav-card {
+    background: #fff;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    /* ↓ 下に余白 */
+    padding: 25px 35px;
+    border-radius: 10px;
+}
+
+.nav-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    gap: 20px !important;
+    /* 必要なら調整 */
+}
+
+.nav-row form {
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+}
+
+.nav-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+}
+
+.nav-btn:hover {
+    background: #f3f3f3;
+}
+
+/* 日付フォーム */
+.date-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+.date-form input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/* ===== 勤怠一覧カード（下） ===== */
+.attendance-card {
+    background: #fff;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    border-radius: 10px;
+}
+
+/* ===== テーブル ===== */
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance-table th {
+    border-bottom: 2px solid #ccc;
+    padding: 12px 10px;
+}
+
+.attendance-table td {
+    border-bottom: 1px solid #eee;
+    padding: 12px 10px;
+}
+
+.detail-link {
+    color: #333;
+    text-decoration: underline;
+}
+
+.nav-inner {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* 左右ボタン */
+.nav-side-btn {
+    display: inline-block !important;
+    white-space: nowrap;
+}
+
+.nav-side-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #333 !important;
+    font-weight: 600;
+    text-decoration: none !important;
+    font-size: 15px;
+}
+
+.nav-side-btn:hover {
+    background: #f3f3f3;
+    text-decoration: none !important;
+}
+
+/* ===== PC: 1400〜1540px ===== */
+@media (min-width: 1400px) and (max-width: 1540px) {
+
+    .nav-card,
+    .attendance-card,
+    .date-title {
+        max-width: 1200px;
+        /* 少し広めに */
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-row {
+        gap: 30px !important;
+    }
+
+    .attendance-table th,
+    .attendance-table td {
+        padding: 14px 12px;
+        /* 文字間隔を広く */
+    }
+
+    .nav-side-btn {
+        padding: 10px 24px;
+        font-size: 16px;
+    }
+}

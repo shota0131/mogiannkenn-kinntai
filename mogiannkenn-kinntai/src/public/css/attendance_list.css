@@ -1,0 +1,95 @@
+/* =========================================
+   🗂 勤怠一覧ページスタイル（app.css 競合対策版）
+   ========================================= */
+
+/* app.css の背景を強制上書き */
+body {
+    background: #e6e6e6 !important;
+}
+
+/* app.css の main-content の flex を無効化 */
+.main-content {
+    display: block !important;
+    padding: 0 !important;
+    justify-content: flex-start !important;
+}
+
+/* app.css の container の max-width:1200px の干渉を消す */
+.attendance-list-container {
+    width: 65% !important;
+    max-width: 900px !important;
+    margin: 50px auto !important;
+    background-color: #ffffff;
+    padding: 40px 60px;
+    border-radius: 8px;
+}
+
+/* 見出し（左の黒ライン） */
+.page-title {
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 4px solid #000;
+    padding-left: 12px;
+    margin-bottom: 30px;
+}
+
+/* 月選択（中央寄せ） */
+.month-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.btn-month {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.current-month {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* テーブル本体 */
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.attendance-table th {
+    background: #e6e6e6;
+    padding: 12px;
+    border: 1px solid #bdbdbd;
+}
+
+.attendance-table td {
+    padding: 12px;
+    border: 1px solid #bdbdbd;
+    text-align: center;
+}
+
+/* 詳細リンク */
+.detail-link {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* PC（1440px～）サイズ */
+@media (min-width: 1440px) {
+    .attendance-list-container {
+        max-width: 850px !important;
+    }
+}
+
+/* スマホ対応 */
+@media (max-width: 767px) {
+    .attendance-list-container {
+        width: 95% !important;
+        padding: 20px !important;
+    }
+}

@@ -1,0 +1,211 @@
+
+
+
+/* =========================================================
+   admin.css を確実に上書きするためのスコープ
+   ========================================================= */
+.staff-attendance-page * {
+    box-sizing: border-box;
+}
+
+/* ===============================
+   全体レイアウト
+   =============================== */
+.staff-attendance-page .staff-attendance-container {
+    width: 780px !important;
+    margin: 40px auto !important;
+}
+
+.staff-attendance-page .page-title {
+    font-size: 22px !important;
+    font-weight: bold !important;
+    margin-bottom: 25px !important;
+}
+
+/* ===============================
+   月移動（← 前月 / 翌月 →）
+   =============================== */
+.staff-attendance-page .month-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 40px !important;
+    font-size: 20px !important;
+    margin-bottom: 25px !important;
+}
+
+.staff-attendance-page .month-nav a {
+    text-decoration: none !important;
+    color: #000 !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+.staff-attendance-page .month-nav span {
+    font-size: 22px !important;
+    font-weight: bold !important;
+}
+
+/* ===============================
+   テーブルカード
+   =============================== */
+.staff-attendance-page .attendance-card {
+    background: #fff !important;
+    padding: 30px !important;
+    border-radius: 10px !important;
+}
+
+/* ===============================
+   テーブル
+   =============================== */
+.staff-attendance-page .attendance-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    text-align: center !important;
+    font-size: 14px !important;
+}
+
+.staff-attendance-page .attendance-table th {
+    background: #f6f6f6 !important;
+    padding: 14px 0 !important;
+    font-weight: bold !important;
+}
+
+.staff-attendance-page .attendance-table td {
+    padding: 14px 0 !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.staff-attendance-page .attendance-table tr:nth-child(even) {
+    background: #fafafa !important;
+}
+
+/* ===============================
+   詳細ボタン
+   =============================== */
+.staff-attendance-page .detail-btn {
+    background: #333 !important;
+    color: #fff !important;
+    padding: 5px 16px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    display: inline-block !important;
+}
+
+/* ===============================
+   CSV ボタン（右下固定）
+   =============================== */
+.staff-attendance-page .csv-download {
+    text-align: right !important;
+    margin-bottom: 20px !important;
+}
+
+.staff-attendance-page .btn-green {
+    background: #000 !important;
+    color: #fff !important;
+    padding: 10px 24px !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    display: inline-block !important;
+}
+
+/* ===============================
+   戻るボタン
+   =============================== */
+.staff-attendance-page .back-button-area {
+    text-align: left !important;
+    margin-top: 25px !important;
+}
+
+.staff-attendance-page .back-btn {
+    background: #777 !important;
+    color: #fff !important;
+    padding: 8px 18px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+}
+
+/* CSV をカード外の右下に配置 */
+.csv-area-bottom {
+    width: 100%;
+    display: block !important;
+    text-align: right !important;
+    margin: 10px 0 20px 0;
+}
+
+.csv-area-bottom .btn-green {
+    background: #000 !important;
+    color: #fff !important;
+    padding: 10px 22px !important;
+    border-radius: 5px;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    display: inline-block !important;
+}
+/* ===============================
+   📱 スマホ
+   =============================== */
+@media (max-width: 479px) {
+    .staff-attendance-page .staff-attendance-container {
+        width: 95% !important;
+        margin: 20px auto !important;
+    }
+
+    .staff-attendance-page .attendance-card {
+        padding: 16px !important;
+    }
+
+    .staff-attendance-page .attendance-table th,
+    .staff-attendance-page .attendance-table td {
+        padding: 10px 6px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .staff-attendance-page .detail-btn {
+        padding: 5px 10px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ===============================
+   タブレット
+   =============================== */
+@media (min-width: 480px) and (max-width: 1023px) {
+    .staff-attendance-page .staff-attendance-container {
+        width: 94% !important;
+        max-width: 800px !important;
+        margin: 30px auto !important;
+    }
+}
+
+/* ===============================
+   PC
+   =============================== */
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .staff-attendance-page .staff-attendance-container {
+        max-width: 950px !important;
+        padding: 0 20px !important;
+    }
+}
+
+/* ===============================
+   PC（1400〜1540px）
+   =============================== */
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .staff-attendance-page .staff-attendance-container {
+        max-width: 1000px !important;
+        padding: 0 24px !important;
+    }
+}
+
+/* ===============================
+   超ワイド
+   =============================== */
+@media (min-width: 1541px) {
+    .staff-attendance-page .staff-attendance-container {
+        max-width: 1040px !important;
+        padding: 0 28px !important;
+    }
+}

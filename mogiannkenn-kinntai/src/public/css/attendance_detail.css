@@ -1,0 +1,162 @@
+/* ===============================
+   🗂 勤怠詳細ページスタイル
+   =============================== */
+
+.attendance-detail-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* 見出し */
+.page-title {
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 4px solid #000;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+
+/* カード枠 */
+.detail-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    overflow: hidden;
+}
+
+/* 表 */
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-table th {
+    text-align: left;
+    width: 30%;
+    padding: 14px 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.detail-table td {
+    padding: 14px 20px;
+    color: #555;
+    font-weight: 600;
+}
+
+/* 各行の下に区切り線 */
+.detail-table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 最終行だけ線を消す */
+.detail-table tr:last-child {
+    border-bottom: none;
+}
+
+/* 備考欄 */
+.remarks-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.button-area {
+    display: flex;
+    justify-content: flex-end;
+    /* 右寄せ */
+    margin-top: 20px;
+}
+
+.update-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.update-btn:hover {
+    background-color: #333;
+}
+
+/* エラーメッセージ */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* 読み取り専用フィールド */
+input.readonly {
+    background-color: #f3f3f3;
+    color: #555;
+    border-color: #ccc;
+    pointer-events: none;
+}
+
+/* ===============================
+   💻 PC対応（1400〜1540px）
+   =============================== */
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .attendance-detail-container {
+        max-width: 800px;
+    }
+
+    .detail-card {
+        padding: 40px 50px;
+    }
+}
+
+/* ===============================
+   📱 スマホ対応（〜767px）
+   =============================== */
+@media (max-width: 767px) {
+    .attendance-detail-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .detail-card {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .detail-table th,
+    .detail-table td {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .detail-table th {
+        background-color: #f9f9f9;
+        padding-top: 10px;
+    }
+
+    .button-area {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .update-btn {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 15px;
+    }
+}

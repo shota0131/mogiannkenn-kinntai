@@ -1,0 +1,249 @@
+/* 全体 */
+body {
+    margin: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* ヘッダー */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 15px 40px;
+    color: #fff;
+}
+
+/* ロゴ */
+.logo img {
+    height: 30px;
+}
+
+/* ナビゲーション */
+.admin-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.admin-nav ul li form button.logout-btn {
+    all: unset !important;
+    /* ← 他のCSSを完全リセット */
+    color: #fff !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 0 !important;
+}
+
+.admin-nav ul li form button.logout-btn:hover {
+    text-decoration: underline !important;
+}
+
+/* メインコンテンツ */
+.admin-main {
+    width: 100%;
+    background: transparent;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    padding: 60px 0;
+}
+
+/* =========================
+   スタッフ一覧テーブル
+   ========================= */
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.staff-table th,
+.staff-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.staff-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.staff-table tr:hover {
+    background-color: #fafafa;
+}
+
+.detail-btn {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.detail-btn:hover {
+    text-decoration: underline;
+}
+
+.admin-nav ul li form {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+/* ログアウトボタンを a タグのように見せる */
+.admin-nav ul li form .logout-btn {
+    all: unset;
+    /* デフォルトスタイル完全リセット */
+    color: #fff !important;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+}
+
+/* hover で下線（他のメニューと同じ） */
+.admin-nav ul li form .logout-btn:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   レスポンシブ対応
+=============================== */
+
+/* スマホ（〜479px） */
+@media (max-width: 479px) {
+
+    /* ヘッダー */
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    /* ナビ */
+    .admin-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .admin-nav ul li a,
+    .admin-nav ul li form button.logout-btn {
+        font-size: 14px;
+    }
+
+    /* メインコンテンツ */
+    .admin-main {
+        padding: 40px 10px;
+    }
+
+    /* スタッフテーブル */
+    .staff-table th,
+    .staff-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+
+    .detail-btn {
+        font-size: 12px;
+    }
+}
+
+/* タブレット（480px〜1023px） */
+@media (min-width: 480px) and (max-width: 1023px) {
+    .admin-header {
+        flex-direction: row;
+        padding: 15px 20px;
+    }
+
+    .admin-nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .admin-main {
+        padding: 50px 15px;
+    }
+
+    .staff-table th,
+    .staff-table td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .detail-btn {
+        font-size: 13px;
+    }
+}
+
+/* 通常PC（1024px〜1399px） */
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .admin-main {
+        padding: 60px 40px;
+    }
+
+    .staff-table th,
+    .staff-table td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .detail-btn {
+        font-size: 14px;
+    }
+}
+
+/* PC（1400px〜1540px） */
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .admin-main {
+        padding: 60px 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .staff-table th,
+    .staff-table td {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .detail-btn {
+        font-size: 15px;
+    }
+}
+
+/* 超ワイド（1541px〜） */
+@media (min-width: 1541px) {
+    .admin-main {
+        padding: 60px 80px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .staff-table th,
+    .staff-table td {
+        padding: 15px 18px;
+        font-size: 16px;
+    }
+
+    .detail-btn {
+        font-size: 16px;
+    }
+}

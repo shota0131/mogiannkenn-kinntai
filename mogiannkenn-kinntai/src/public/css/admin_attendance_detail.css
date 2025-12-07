@@ -1,0 +1,170 @@
+/* ================================
+   勤怠詳細ページ専用 CSS
+   ================================ */
+
+/* カード全体のコンテナ */
+.admin-main .attendance-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 横方向中央 */
+    justify-content: flex-start;
+    /* 縦方向は上寄せ */
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    /* ページ背景 */
+    min-height: calc(100vh - 80px);
+}
+
+/* タイトル（カード外、左上寄せ） */
+.admin-main .attendance-detail-container>.detail-title {
+    font-size: 24px;
+    font-weight: bold;
+    align-self: flex-start;
+    /* 左上に寄せる */
+    margin-bottom: 20px;
+}
+
+/* カード本体 */
+.admin-main .attendance-detail-container .detail-card {
+    background-color: #fff;
+    /* 白カード */
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    /* 横方向中央に寄せる */
+}
+
+/* 各行（ラベル＋入力） */
+.admin-main .attendance-detail-container .detail-card .detail-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* ラベル */
+.admin-main .attendance-detail-container .detail-card .detail-row label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* 入力フィールド */
+.admin-main .attendance-detail-container .detail-card .input-text,
+.admin-main .attendance-detail-container .detail-card .input-time {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* 出勤・退勤や休憩の横並び */
+.admin-main .attendance-detail-container .detail-card .flex-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-main .attendance-detail-container .detail-card .separator {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+/* エラーメッセージ */
+.admin-main .attendance-detail-container .detail-card .error {
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* 修正ボタンエリア（カード外、右下に寄せる） */
+.admin-main .attendance-detail-container>.btn-area {
+    display: flex !important;
+    justify-content: flex-end !important;
+    /* 右寄せ */
+    width: 100% !important;
+    margin-top: 20px;
+    /* カードとの間隔 */
+}
+
+/* 修正ボタン */
+.admin-main .attendance-detail-container>.btn-area .update-btn {
+    background-color: #000;
+    /* 黒背景 */
+    color: #fff;
+    /* 白文字 */
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.admin-main .attendance-detail-container>.btn-area .update-btn:hover {
+    background-color: #333;
+    /* ホバー時に少し明るめの黒 */
+}
+
+.pending-message {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* ===============================
+   💻 タブレット（480px〜1023px）
+   =============================== */
+@media (min-width: 480px) and (max-width: 1023px) {
+    .attendance-detail-container {
+        max-width: 90%;
+        padding: 30px;
+    }
+
+    .detail-card {
+        padding: 24px;
+    }
+}
+
+/* ===============================
+   🖥 通常PC（1024px〜1399px）
+   =============================== */
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .attendance-detail-container {
+        max-width: 720px;
+        padding: 36px;
+    }
+}
+
+/* ===============================
+   💡 要件：PC（1400px〜1540px）
+   =============================== */
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .attendance-detail-container {
+        max-width: 750px;
+        padding: 40px;
+    }
+
+    .detail-table th {
+        width: 28%;
+    }
+
+    .detail-table td {
+        width: 72%;
+    }
+}
+
+/* ===============================
+   🖥 超ワイドモニター（1541px〜）
+   =============================== */
+@media (min-width: 1541px) {
+    .attendance-detail-container {
+        max-width: 800px;
+        padding: 42px;
+    }
+}
